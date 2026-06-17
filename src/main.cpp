@@ -15,35 +15,22 @@
 #include <Arduino.h>
 
 #include "Display.h"
+#include "MicroSD.h"
 #include "WifiInterface.h"
 
 Display display;
 WifiInterface wifi;
+MicroSD sd;
 
 void setup()
 {
   Serial.begin(115200);
 
-  // Start the SPI for the touchscreen and init the touchscreen
-  //touchscreenSPI.begin(XPT2046_CLK, XPT2046_MISO, XPT2046_MOSI, XPT2046_CS);
-  //touchscreen.begin();
-  // Set the Touchscreen rotation in landscape mode
-  // Note: in some displays, the touchscreen might be upside down, so you might need to set the rotation to 3: touchscreen.setRotation(3);
-  //touchscreen.setRotation(1);
-
   wifi.connect();
 
   display.begin();
-  //
-  //tft.drawLine(10, 10, 100, 10, TFT_WHITE);  // Draw a white line
-  //tft.drawRect(10, 20, 50, 30, TFT_RED);     // Draw a red rectangle
-  //tft.fillRect(70, 20, 50, 30, TFT_GREEN);   // Draw a filled green rectangle
-  //tft.drawCircle(50, 100, 20, TFT_YELLOW);   // Draw a yellow circle
-  //tft.fillCircle(100, 100, 20, TFT_BLUE);    // Draw a filled blue circle
 
-  // Set X and Y coordinates for center of display
-
-  //tft.drawCentreString("Touch screen to test", centerX, centerY, FONT_SIZE);
+  sd.begin();
 }
 
 void loop()

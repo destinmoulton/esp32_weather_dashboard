@@ -7,10 +7,10 @@
 #include "Screen.h"
 #include "TFT_eSPI.h"
 
-#define DASH_SLEEP_HOUR 9
-#define DASH_SLEEP_MINUTE 18
-#define DASH_WAKE_HOUR 9
-#define DASH_WAKE_MINUTE 19
+#define DASH_SLEEP_HOUR 21
+#define DASH_SLEEP_MINUTE 0
+#define DASH_WAKE_HOUR 7
+#define DASH_WAKE_MINUTE 0
 
 struct WeatherSensorData
 {
